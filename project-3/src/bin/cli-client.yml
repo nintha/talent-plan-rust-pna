@@ -1,0 +1,42 @@
+name: kvs-client
+subcommands:
+  - set:
+      about: Set the value of a string key to a string
+      args:
+        - KEY:
+            required: true
+        - VALUE:
+            required: true
+        - addr:
+            long: addr
+            required: false
+            value_name: IP-PORT
+            help: an IP address, either v4 or v6, and a port number, with the format IP:PORT
+            takes_value: true
+
+  - get:
+      about: Get the string value of a given string key
+      args:
+        - KEY:
+            required: true
+        - addr:
+            long: addr
+            required: false
+            value_name: IP-PORT
+            help: an IP address, either v4 or v6, and a port number, with the format IP:PORT
+            takes_value: true
+  - rm:
+      about: Remove a given key
+      args:
+        - KEY:
+            required: true
+        - addr:
+            long: addr
+            required: false
+            value_name: IP-PORT
+            help: an IP address, either v4 or v6, and a port number, with the format IP:PORT
+            takes_value: true
+
+
+
+
